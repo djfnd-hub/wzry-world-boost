@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀世界代肝平台 - 专业高效安全</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航 */
+        nav {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffd700, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        /* Hero区域 */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #ff6b35, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 50px;
+            background: linear-gradient(45deg, #ff6b35, #ffd700);
+            color: #1a1a2e;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+        }
+        
+        /* 服务卡片 */
+        .services {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+        }
+        
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .service-card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .price {
+            font-size: 28px;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        /* 价格表 */
+        .pricing {
+            padding: 60px 0;
+            background: rgba(0,0,0,0.2);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        
+        .pricing-table th,
+        .pricing-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .pricing-table th {
+            background: rgba(255,107,53,0.2);
+            color: #ffd700;
+        }
+        
+        .pricing-table tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #ff6b35;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        /* 联系方式 */
+        .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .contact-item {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        
+        .contact-item span {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: rgba(0,0,0,0.5);
+            padding: 30px 0;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .pricing-table {
+                font-size: 14px;
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav>
+        <div class="container">
+            <div class="logo">🏆 王者代肝</div>
+            <div class="nav-links">
+                <a href="#services">服务项目</a>
+                <a href="#pricing">价格表</a>
+                <a href="#contact">联系下单</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>王者荣耀世界代肝平台</h1>
+            <p>专业代练 · 安全高效 · 纯手工操作 · 拒绝外挂</p>
+            <a href="#contact" class="cta-btn">立即下单</a>
+        </div>
+    </section>
+
+    <!-- 服务 -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">🎮 服务项目</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚔️</div>
+                    <h3>主线剧情代过</h3>
+                    <p>纯手工过主线，解锁全部剧情内容，不跳过任何重要对话</p>
+                    <div class="price">¥30起</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>等级代肝</h3>
+                    <p>快速升级，解锁更多玩法和功能，按等级收费</p>
+                    <div class="price">¥50起</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏅</div>
+                    <h3>段位代打</h3>
+                    <p>专业玩家代打排位，提升段位，赛季奖励全拿</p>
+                    <div class="price">¥80起</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3>资源代刷</h3>
+                    <p>金币、材料、装备代刷，按数量或时间收费</p>
+                    <div class="price">¥20起</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗺️</div>
+                    <h3>探索代跑</h3>
+                    <p>全地图探索，收集宝箱、解锁传送点、完成支线</p>
+                    <div class="price">¥60起</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>成就代做</h3>
+                    <p>完成各类成就挑战，获取限定称号和奖励</p>
+                    <div class="price">¥40起</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格表 -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">💰 详细价格表</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>服务项目</th>
+                        <th>具体内容</th>
+                        <th>价格</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>主线剧情</td>
+                        <td>第一章全通</td>
+                        <td><span class="tag">¥30</span></td>
+                        <td>约2-3小时</td>
+                    </tr>
+                    <tr>
+                        <td>主线剧情</td>
+                        <td>全章节通关</td>
+                        <td><span class="tag">¥100</span></td>
+                        <td>约8-12小时</td>
+                    </tr>
+                    <tr>
+                        <td>等级代肝</td>
+                        <td>1-30级</td>
+                        <td><span class="tag">¥50</span></td>
+                        <td>1天内完成</td>
+                    </tr>
+                    <tr>
+                        <td>等级代肝</td>
+                        <td>30-50级</td>
+                        <td><span class="tag">¥80</span></td>
+                        <td>1-2天完成</td>
+                    </tr>
+                    <tr>
+                        <td>等级代肝</td>
+                        <td>50-70级</td>
+                        <td><span class="tag">¥120</span></td>
+                        <td>2-3天完成</td>
+                    </tr>
+                    <tr>
+                        <td>段位代打</td>
+                        <td>青铜→白银</td>
+                        <td><span class="tag">¥30</span></td>
+                        <td>胜率保证80%+</td>
+                    </tr>
+                    <tr>
+                        <td>段位代打</td>
+                        <td>白银→黄金</td>
+                        <td><span class="tag">¥50</span></td>
+                        <td>胜率保证75%+</td>
+                    </tr>
+                    <tr>
+                        <td>段位代打</td>
+                        <td>黄金→铂金</td>
+                        <td><span class="tag">¥80</span></td>
+                        <td>胜率保证70%+</td>
+                    </tr>
+                    <tr>
+                        <td>段位代打</td>
+                        <td>铂金→钻石</td>
+                        <td><span class="tag">¥150</span></td>
+                        <td>胜率保证65%+</td>
+                    </tr>
+                    <tr>
+                        <td>资源代刷</td>
+                        <td>金币10万</td>
+                        <td><span class="tag">¥20</span></td>
+                        <td>纯手工刷取</td>
+                    </tr>
+                    <tr>
+                        <td>全图探索</td>
+                        <td>单区域100%</td>
+                        <td><span class="tag">¥30/区</span></td>
+                        <td>含宝箱+传送点</td>
+                    </tr>
+                    <tr>
+                        <td>全图探索</td>
+                        <td>全地图100%</td>
+                        <td><span class="tag">¥200</span></td>
+                        <td>打包优惠</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">📞 联系下单</h2>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <span>微信客服：</span> dgan886688
+                </div>
+                <div class="contact-item">
+                    <span>备用微信：</span> dgan886688（同号）
+                </div>
+                <div class="contact-item">
+                    <span>接单时间：</span> 每日 9:00 - 24:00
+                </div>
+                <div class="contact-item">
+                    <span>服务承诺：</span> 纯手工操作 · 账号安全保障 · 不满意退款
+                </div>
+                <p style="margin-top: 30px; color: #888; font-size: 14px;">
+                    下单前请先联系客服确认时间和价格<br>
+                    支持支付宝、微信支付
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>⚠️ 免责声明：本服务仅供学习交流，请遵守游戏用户协议，理性游戏</p>
+            <p style="margin-top: 10px;">© 2026 王者荣耀世界代肝平台 - 专业游戏代练服务</p>
+        </div>
+    </footer>
+</body>
+</html>
